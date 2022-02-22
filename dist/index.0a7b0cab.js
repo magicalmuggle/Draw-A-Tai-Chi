@@ -1,6 +1,5 @@
-let html = document.querySelector("#html")
-let style = document.querySelector("#style")
-
+let html = document.querySelector("#html");
+let style = document.querySelector("#style");
 let str = `
 /*
  * 你好，我是 Richard Huang
@@ -54,31 +53,25 @@ let str = `
   border-radius: 50%;
   background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
 }
-`
-let str2 = ""
-let n = 0
-let speed = 30
-
+`;
+let str2 = "";
+let n = 0;
+let speed = 30;
 function change() {
-  setTimeout(() => {
-    if (n >= str.length) {
-      return
-    }
-    if (str[n] === "\n") {
-      str2 += "<br>";
-    } else if (str[n] === " ") {
-      str2 += "&nbsp;"
-    } else {
-      str2 += str[n];
-    }
-    html.innerHTML = str2
-    style.innerHTML = str.substring(0, n + 1)
-    // 滚动到底部
-    window.scrollTo(0, document.body.scrollHeight);
-    html.scrollTo(0, html.scrollHeight)
-    n++
-    change()
-  }, speed)
+    setTimeout(()=>{
+        if (n >= str.length) return;
+        if (str[n] === "\n") str2 += "<br>";
+        else if (str[n] === " ") str2 += "&nbsp;";
+        else str2 += str[n];
+        html.innerHTML = str2;
+        style.innerHTML = str.substring(0, n + 1);
+        // 滚动到底部
+        window.scrollTo(0, document.body.scrollHeight);
+        html.scrollTo(0, html.scrollHeight);
+        n++;
+        change();
+    }, speed);
 }
+change();
 
-change()
+//# sourceMappingURL=index.0a7b0cab.js.map
