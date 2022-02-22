@@ -1,0 +1,23 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#html {
+  word-break: break-all;
+}
+
+#tai-chi {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px
+}
+
+#tai-chi::before, #tai-chi::after {
+  content: "";
+  display: block;
+  position: absolute;
+
+}
