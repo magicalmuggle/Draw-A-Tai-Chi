@@ -57,7 +57,7 @@ let str = `
 `
 let str2 = ""
 let n = 0
-let speed = 50
+let speed = 1
 
 function change() {
   setTimeout(() => {
@@ -75,7 +75,6 @@ function change() {
     style.innerHTML = str.substring(0, n + 1)
     // 页面滚动到底部
     window.scrollTo(0, document.body.scrollHeight);
-    console.log(str.substring(0, n + 1))
     n++
     change()
   }, speed)
