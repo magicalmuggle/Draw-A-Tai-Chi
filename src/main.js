@@ -54,6 +54,9 @@ let str = `
   border-radius: 50%;
   background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
 }
+/*
+ * 这样一个太极就画完啦！
+ */
 `
 let str2 = ""
 let n = 0
