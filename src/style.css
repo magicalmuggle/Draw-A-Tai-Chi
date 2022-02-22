@@ -19,5 +19,20 @@
   content: "";
   display: block;
   position: absolute;
+}
 
+@media (max-width: 800px) {
+  #tai-chi-wrapper {
+    height: 50vh;
+  }
+
+  #html {
+    height: 50vh;
+    overflow: auto;
+  }
+
+  #tai-chi {
+    position: relative;
+    top: 20px;
+  }
 }

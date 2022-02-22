@@ -56,7 +56,7 @@ let str = `
 `;
 let str2 = "";
 let n = 0;
-let speed = 50;
+let speed = 1;
 function change() {
     setTimeout(()=>{
         if (n >= str.length) return;
@@ -65,9 +65,9 @@ function change() {
         else str2 += str[n];
         html.innerHTML = str2;
         style.innerHTML = str.substring(0, n + 1);
-        // 页面滚动到底部
+        // 滚动到底部
         window.scrollTo(0, document.body.scrollHeight);
-        console.log(str.substring(0, n + 1));
+        html.scrollTo(0, html.scrollHeight);
         n++;
         change();
     }, speed);

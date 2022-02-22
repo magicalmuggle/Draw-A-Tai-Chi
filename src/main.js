@@ -73,8 +73,9 @@ function change() {
     }
     html.innerHTML = str2
     style.innerHTML = str.substring(0, n + 1)
-    // 页面滚动到底部
+    // 滚动到底部
     window.scrollTo(0, document.body.scrollHeight);
+    html.scrollTo(0, html.scrollHeight)
     n++
     change()
   }, speed)
